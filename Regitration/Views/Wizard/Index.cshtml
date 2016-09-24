@@ -1,0 +1,43 @@
+﻿@using Microsoft.Web.Mvc
+@model Regitration.ViewModels.WizardViewModel
+
+@{
+    ViewBag.Title = "Registration";
+    var currentStep = Model.Steps[Model.CurrentStepIndex];
+}
+
+<h2>Registration</h2>
+
+<h5>Step @(Model.CurrentStepIndex + 1) of @Model.Steps.Count</h5>
+
+@using (Html.BeginForm())
+{
+    @Html.Serialize("wizard", Model)
+
+    @Html.Hidden("StepType", currentStep.GetType())
+
+    <div class="row">
+        @Html.EditorFor(x => currentStep, null, "")
+    </div>
+
+    <div class="row">
+        <div class="col-sm-5 col-sm-offset-5 text-right">
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Cancel</button>
+            @if (Model.CurrentStepIndex > 0)
+            {
+                <input type="submit" value="Previous" name="prev" class="btn btn-default" />
+            }
+
+            @if (Model.CurrentStepIndex < Model.Steps.Count - 1)
+            {
+                <input type="submit" value="Next" name="next" class="btn btn-default" />
+            }
+            else
+            {
+                <input type="submit" value="Finish" name="finish" class="btn btn-default" />
+            }
+        </div>
+    </div>
+}
+
+@Html.Partial("_RegistrationCancelDialog")

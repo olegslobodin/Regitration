@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Test task</title>
+</head>
+<body>
+    <div class="container fill">
+        @RenderBody()
+    </div>
+
+    @Styles.Render("~/Content/bootstrap-theme.min.css")
+    @Styles.Render("~/Content/jquery.qtip.min.css")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/Scripts/bootstrap.min.js")
+    @Scripts.Render("~/Scripts/Site.js")
+    @Scripts.Render("~/Scripts/jquery.qtip.min.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

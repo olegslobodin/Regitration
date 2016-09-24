@@ -1,0 +1,16 @@
+﻿@model Regitration.ViewModels.Step2ViewModel
+
+@{
+    Model.Initialize();
+}
+<div class="form-horizontal">
+    <h4>Business Area</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.EditorFor(x => x.BusinessAreas)
+        <div class="col-xs-1 text-right">
+            @Html.ValidationMessageFor(x => x.BusinessAreas)
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row fill">
+    <div class="col-md-12 text-center fill">
+        @Html.ActionLink("Sign up...", "Index", "Wizard", null, htmlAttributes: new { @class = "welcome-text welcome-text-start" })
+    </div>
+</div>
+
+@Styles.Render("https://fonts.googleapis.com/css?family=Pacifico")

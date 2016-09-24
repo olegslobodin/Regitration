@@ -1,0 +1,72 @@
+﻿body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: linear-gradient(to bottom right, #3F51B5, #03A9F4, #03A9F4);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+}
+
+@keyframes down {
+    0% {
+        text-shadow: 4px 4px 10px black;
+    }
+
+    100% {
+        text-shadow: 1px 1px 10px black;
+    }
+}
+
+@keyframes up {
+
+    0% {
+        text-shadow: 1px 1px 10px black;
+    }
+
+    100% {
+        text-shadow: 4px 4px 10px black;
+    }
+}
+
+.welcome-text, .welcome-text:hover {
+    font-size: 64px;
+    color: #03A9F4;
+    position: relative;
+    top: 40%;
+    text-decoration: none;
+}
+
+    .welcome-text:not(:hover) {
+        animation-name: down;
+        animation-duration: 0.2s;
+        text-shadow: 1px 1px 10px black;
+    }
+
+    .welcome-text:hover {
+        animation-name: up;
+        animation-duration: 0.2s;
+        text-shadow: 4px 4px 10px black;
+    }
+
+.welcome-text-start {
+    font-family: 'Pacifico', cursive;
+}
+
+.welcome-text-end {
+    font-family: 'Indie Flower', cursive;
+}
+
+.fill {
+    height: 100%;
+}
+
+.big-checkbox {
+	width: 18px;
+	height: 18px;
+}

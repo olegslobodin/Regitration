@@ -1,0 +1,11 @@
+﻿@model Regitration.ViewModels.BusinessArea
+
+
+<div class="col-sm-1 col-xs-2 text-right">
+    @Html.HiddenFor(x => x.Id)
+    @Html.CheckBoxFor(x => x.IsChecked, htmlAttributes: new { @class = "big-checkbox" })
+</div>
+<div class="col-sm-5 col-xs-4">
+    @Html.LabelFor(x => x.IsChecked, Model.Name, htmlAttributes: new { @class = "control-label"})
+    @Html.HiddenFor(x => x.Name)
+</div>

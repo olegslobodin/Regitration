@@ -1,0 +1,121 @@
+﻿@model Regitration.ViewModels.Step1ViewModel
+
+@{
+    Model.Initialize();
+    var selectList = new SelectList(Model.Salutations, "Id", "Name");
+}
+
+<div class="form-horizontal">
+    <h4>Contact Info</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="col-md-5 col-sm-12">
+        <div class="form-group">
+            @Html.LabelFor(x => x.SalutationId, htmlAttributes: new { @class = "control-label col-md-4 col-sm-2 col-xs-12" })
+            <div class="col-md-7 col-sm-9 col-xs-10">
+                @Html.DropDownListFor(x => x.SalutationId, selectList, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.FirstName, htmlAttributes: new { @class = "control-label col-md-4 col-sm-2 col-xs-12" })
+            <div class="col-md-7 col-sm-9 col-xs-10">
+                @Html.EditorFor(x => x.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div class="col-xs-1">
+                @Html.ValidationMessageFor(x => x.FirstName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.MiddleName, htmlAttributes: new { @class = "control-label col-md-4 col-sm-2 col-xs-12" })
+            <div class="col-md-7 col-sm-9 col-xs-10">
+                @Html.EditorFor(x => x.MiddleName, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div class="col-xs-1">
+                @Html.ValidationMessageFor(x => x.MiddleName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.LastName, htmlAttributes: new { @class = "control-label col-md-4 col-sm-2 col-xs-12" })
+            <div class="col-md-7 col-sm-9 col-xs-10">
+                @Html.EditorFor(x => x.LastName, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div class="col-xs-1">
+                @Html.ValidationMessageFor(x => x.LastName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Company, htmlAttributes: new { @class = "control-label col-md-4 col-sm-2 col-xs-12" })
+            <div class="col-md-7 col-sm-9 col-xs-10">
+                @Html.EditorFor(x => x.Company, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div class="col-xs-1">
+                @Html.ValidationMessageFor(x => x.Company)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Title, htmlAttributes: new { @class = "control-label col-md-4 col-sm-2 col-xs-12" })
+            <div class="col-md-7 col-sm-9 col-xs-10">
+                @Html.EditorFor(x => x.Title, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div class="col-xs-1">
+                @Html.ValidationMessageFor(x => x.Title)
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5 col-sm-12">
+        <div class="form-group">
+            @Html.LabelFor(x => x.Email, htmlAttributes: new { @class = "control-label col-md-4 col-sm-2 col-xs-12" })
+            <div class="col-md-7 col-sm-9 col-xs-10">
+                @Html.EditorFor(x => x.Email, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div class="col-xs-1">
+                @Html.ValidationMessageFor(x => x.Email)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.ConfirmEmail, htmlAttributes: new { @class = "control-label col-md-4 col-sm-2 col-xs-12" })
+            <div class="col-md-7 col-sm-9 col-xs-10">
+                @Html.EditorFor(x => x.ConfirmEmail, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div class="col-xs-1">
+                @Html.ValidationMessageFor(x => x.ConfirmEmail)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Phone, htmlAttributes: new { @class = "control-label col-md-4 col-sm-2 col-xs-12" })
+            <div class="col-md-7 col-sm-9 col-xs-10">
+                @Html.EditorFor(x => x.Phone, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div class="col-xs-1">
+                @Html.ValidationMessageFor(x => x.Phone)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Fax, htmlAttributes: new { @class = "control-label col-md-4 col-sm-2 col-xs-12" })
+            <div class="col-md-7 col-sm-9 col-xs-10">
+                @Html.EditorFor(x => x.Fax, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div class="col-xs-1">
+                @Html.ValidationMessageFor(x => x.Fax)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Moblie, htmlAttributes: new { @class = "control-label col-md-4 col-sm-2 col-xs-12" })
+            <div class="col-md-7 col-sm-9 col-xs-10">
+                @Html.EditorFor(x => x.Moblie, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div class="col-xs-1">
+                @Html.ValidationMessageFor(x => x.Moblie)
+            </div>
+        </div>
+    </div>
+</div>
