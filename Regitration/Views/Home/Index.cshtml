@@ -1,11 +1,37 @@
-﻿@{
+﻿@model Regitration.ViewModels.LoginPageViewModel
+
+@{
     ViewBag.Title = "Home Page";
 }
 
-<div class="row fill">
-    <div class="col-md-12 text-center fill">
-        @Html.ActionLink("Sign up...", "Index", "Wizard", null, htmlAttributes: new { @class = "welcome-text welcome-text-start" })
+<div class="login-page vertical-fill">
+    <div class="login_outline"></div>
+    <div class="login_background"></div>
+    <div class="version">
+        CORAL MULTI-SIDED PLATFORM 0.2.6.95 iQA
+        <div class="logo_s"></div>
     </div>
+    <div class="login-form-container">
+        @using (Html.BeginForm())
+        {
+            @Html.EditorFor(x => x)
+            <div class="row side-margins-0">
+                <input id="loginBtn" type="submit" name="next" class="btn btn-default upper-case" />
+            </div>
+        }
+        <div id="links-bar" class="row side-margins-0">
+            <div class="col-xs-5 side-paddings-0 text-left">
+                <a href="">Forgot Password?</a>
+            </div>
+            <div class="col-xs-3 side-paddings-0 text-center">
+                @Html.ActionLink("Register", "Index", "Wizard")
+            </div>
+            <div class="col-xs-4 side-paddings-0 text-right">
+                <a href="">Contact Coral</a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">© 2014-2016 Coral Technology, LLC</div>
 </div>
 
-@Styles.Render("https://fonts.googleapis.com/css?family=Pacifico")
+@Styles.Render("https://fonts.googleapis.com/css?family=Raleway:500")

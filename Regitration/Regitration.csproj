@@ -139,6 +139,7 @@
     <Compile Include="ViewModels\BusinessArea.cs" />
     <Compile Include="ViewModels\CountryViewModel.cs" />
     <Compile Include="ViewModels\IStepViewModel.cs" />
+    <Compile Include="ViewModels\LoginPageViewModel.cs" />
     <Compile Include="ViewModels\SalutationViewModel.cs" />
     <Compile Include="ViewModels\Step1ViewModel.cs" />
     <Compile Include="ViewModels\Step2ViewModel.cs" />
@@ -151,8 +152,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\jquery.qtip.css" />
-    <Content Include="Content\jquery.qtip.min.css" />
+    <Content Include="Content\opentip.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -164,13 +164,12 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.qtip.js" />
-    <Content Include="Scripts\jquery.qtip.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\opentip-jquery.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\Site.js" />
@@ -195,6 +194,7 @@
     <Content Include="Views\Wizard\EditorTemplates\Step3ViewModel.cshtml" />
     <Content Include="Views\Wizard\EditorTemplates\Step4ViewModel.cshtml" />
     <Content Include="Views\Wizard\_RegistrationCancelDialog.cshtml" />
+    <Content Include="Views\Home\EditorTemplates\LoginPageViewModel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

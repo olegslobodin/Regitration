@@ -1,0 +1,17 @@
+﻿@model Regitration.ViewModels.LoginPageViewModel
+
+<div class="form-group row side-margins-0">
+    @Html.LabelFor(x => x.Email, htmlAttributes: new { @class = "login-page-label col-md-3" })
+    <div class="col-md-9 login-page-editor-container" style="display:inline-flex">
+        @Html.EditorFor(x => x.Email, new { htmlAttributes = new { @class = "form-control edit-text" } })
+        @Html.ValidationMessageFor(x => x.Email)
+    </div>
+</div>
+
+<div class="form-group row side-margins-0">
+    @Html.LabelFor(x => x.Password, htmlAttributes: new { @class = "login-page-label col-md-3" })
+    <div class="col-md-9 login-page-editor-container" style="display:inline-flex">
+        @Html.EditorFor(x => x.Password, new { htmlAttributes = new { @class = "form-control edit-text" } })
+        @Html.ValidationMessageFor(x => x.Password)
+    </div>
+</div>

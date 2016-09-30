@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using Regitration.ViewModels;
 
 namespace Regitration.Controllers
 {
@@ -7,6 +8,12 @@ namespace Regitration.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index(LoginPageViewModel model)
+        {
+            return ModelState.IsValid ? View() : View(model);
         }
     }
 }

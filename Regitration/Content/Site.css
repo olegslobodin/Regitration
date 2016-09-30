@@ -1,72 +1,235 @@
-﻿body {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background: linear-gradient(to bottom right, #3F51B5, #03A9F4, #03A9F4);
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-h1,h2,h3,h4,h5,h6 {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
-}
-
-@keyframes down {
-    0% {
-        text-shadow: 4px 4px 10px black;
-    }
-
-    100% {
-        text-shadow: 1px 1px 10px black;
-    }
-}
-
-@keyframes up {
-
-    0% {
-        text-shadow: 1px 1px 10px black;
-    }
-
-    100% {
-        text-shadow: 4px 4px 10px black;
-    }
-}
-
-.welcome-text, .welcome-text:hover {
-    font-size: 64px;
-    color: #03A9F4;
-    position: relative;
-    top: 40%;
-    text-decoration: none;
-}
-
-    .welcome-text:not(:hover) {
-        animation-name: down;
-        animation-duration: 0.2s;
-        text-shadow: 1px 1px 10px black;
-    }
-
-    .welcome-text:hover {
-        animation-name: up;
-        animation-duration: 0.2s;
-        text-shadow: 4px 4px 10px black;
-    }
-
-.welcome-text-start {
-    font-family: 'Pacifico', cursive;
-}
-
-.welcome-text-end {
-    font-family: 'Indie Flower', cursive;
-}
-
-.fill {
+﻿.vertical-fill {
     height: 100%;
 }
+
+.login-page {
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+}
+
+    .login-page .form-control {
+        border-color: #ccd9d3;
+        box-shadow: none;
+    }
+
+.login-form-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -220px;
+    margin-top: -150px;
+    width: 440px;
+    height: 300px;
+    padding: 60px 50px;
+    background-color: white;
+}
+
+.login_outline {
+    position: absolute;
+    width: 458px;
+    height: 318px;
+    left: 50%;
+    top: 50%;
+    margin-top: -159px;
+    margin-left: -229px;
+    border: 9px solid #d0d6d3;
+    border-radius: 9px;
+}
+
+.login_background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(http://vnet.coralteq.com:1261/Content/images/login_background.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.edit-text {
+    border-radius: 0;
+    padding: 0 7px;
+    height: 36px;
+    width: 238px;
+}
+
+input {
+    font: 13px 'varela_roundregular', Tahoma, Geneva, sans-serif;
+}
+
+@media only screen and (max-width: 1000px) {
+    .login-form-container {
+        position: absolute;
+        margin-left: -150px;
+        margin-top: -125px;
+        width: 300px;
+        height: 250px;
+        padding: 30px 20px 10px;
+    }
+
+    .login_outline {
+        border: 5px solid #d0d6d3;
+        border-radius: 5px;
+        width: 310px;
+        margin-left: -155px;
+        height: 260px;
+        margin-top: -130px;
+    }
+
+    .login_background {
+        background-image: url(http://vnet.coralteq.com:1261/Content/images/login_background_phone.png);
+    }
+
+    .login-page a {
+        font-size: 11px;
+    }
+
+    #loginBtn {
+        margin: 0 0 8px 0;
+        padding: 5px 23px;
+    }
+
+    .login-page-editor-container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .edit-text {
+        width: 261px;
+    }
+
+    .login-page-label {
+        padding-top: 0;
+        margin-bottom: 2px;
+    }
+
+    .login-page .version {
+        margin-left: -150px;
+        width: 300px;
+        font-size: 10px;
+        margin-top: -150px;
+    }
+
+    div.copyright {
+        margin-left: -73px;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .login-page-label {
+        padding-top: 7px;
+    }
+
+    #links-bar {
+        margin-top: 5px;
+    }
+
+    .login-page .version {
+        margin-left: -220px;
+        width: 440px;
+        margin-top: -184px;
+        font-size: 13px;
+    }
+
+    div.copyright {
+        margin-left: 20px;
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-height:830px) {
+    div.copyright {
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-height:640px) {
+    div.copyright {
+        margin-left: -73px;
+        bottom: 10px;
+    }
+}
+
+@media only screen and (min-height:640px) {
+    div.copyright {
+        bottom: 50px;
+    }
+}
+
+.login-form-container .btn {
+    font-size: 14px;
+    color: white;
+    float: right;
+    margin: 10px 0 30px;
+    padding: 10px 33px;
+    border-radius: 4px;
+    border: 0 none transparent;
+    display: table;
+}
+
+.btn-default {
+    background-color: #666666;
+}
+
+    .btn-default:hover {
+        background-color: #4e4e4e;
+    }
 
 .big-checkbox {
-	width: 18px;
-	height: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+.upper-case {
+    text-transform: uppercase;
+}
+
+.side-margins-0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.side-paddings-0 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.login-page-label {
+    text-align: left;
+    color: #666666;
+    font-weight: normal;
+    font-size: 13px;
+    padding-left: 0;
+}
+
+.login-page-editor-container {
+    padding-right: 0;
+}
+
+.login-page a {
+    color: #69b4da;
+}
+
+.login-page .version {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: right;
+    color: white;
+    text-transform: uppercase;
+}
+
+.version div.logo_s {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxMS42NjlweCIgaGVpZ2h0PSIxMS42MnB4IiB2aWV3Qm94PSIwIDAgMTEuNjY5IDExLjYyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMS42NjkgMTEuNjIiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0ZGRkZGRiIgZD0iTTAuMDExLDYuNzA2Yy0wLjAxLTAuMDEtMC4wMTMtMC4wMjQtMC4wMS0wLjAzNwoJYzAuMDA0LTAuMDEzLDAuMDE0LTAuMDIzLDAuMDI3LTAuMDI3QzAuMjA0LDYuNTg5LDAuNzE5LDYuNDM4LDEsNi4zNTRDMS42Nyw2LjE1NywyLjk1OCw1Ljc4MSwzLjMwMiw1LjY4CgljMC4wMjItMC4wMDYsMC4wNDUtMC4wMDMsMC4wNjQsMC4wMDljMC4wMTksMC4wMTMsMC4wMzEsMC4wMzMsMC4wMzQsMC4wNTVsMC42NjMsNS4wNjNjMC4wMDMsMC4wMjMtMC4wMDksMC4wNDctMC4wMzEsMC4wNTcKCWMtMC4wMjEsMC4wMTEtMC4wNDcsMC4wMDYtMC4wNjQtMC4wMTFjLTAuMjY4LTAuMjc2LTAuOTM2LTAuOTY1LTEuMjkxLTEuMzM4QzIuMTI1LDguOTMsMS41NjksOC4zNDYsMS4wMTMsNy43NjQKCUMwLjcyOCw3LjQ2MywwLjE3MSw2Ljg3NSwwLjAxMSw2LjcwNnoiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xMS41OTgsMi4zNzljMC4wMzEsMC4wMDksMC4wNTYsMC4wMzMsMC4wNjYsMC4wNjMKCWMwLjAxLDAuMDMsMC4wMDUsMC4wNjQtMC4wMTUsMC4wOWMtMi4yMDgsMy4wMTktNC40MTMsNi4wMzItNi42MjgsOS4wNTZjLTAuMDE5LDAuMDI1LTAuMDUxLDAuMDM3LTAuMDgxLDAuMDI5CglzLTAuMDUzLTAuMDMzLTAuMDU3LTAuMDY0Yy0wLjUwMS0zLjgzMS0xLTcuNjQ5LTEuNTAyLTExLjQ3NUMzLjM3OCwwLjA1NSwzLjM4NywwLjAzMiwzLjQwNSwwLjAxNwoJYzAuMDE4LTAuMDE2LDAuMDQyLTAuMDIxLDAuMDY0LTAuMDE0QzYuMTgyLDAuNzk4LDguODg2LDEuNTg3LDExLjU5OCwyLjM3OXoiLz4KPC9zdmc+Cg==) no-repeat;
+    margin-left: 2px;
+    margin-top: -5px;
+    float: right;
+    width: 12px;
+    height: 12px;
+}
+
+div.copyright {
+    position: absolute;
+    left: 50%;
+    color: rgb(102, 102, 102);
 }
