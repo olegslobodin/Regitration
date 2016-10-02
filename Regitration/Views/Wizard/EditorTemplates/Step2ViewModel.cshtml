@@ -5,11 +5,20 @@
 }
 <div class="form-horizontal">
     <div class="form-group">
-        <div class="col-sm-6">
+        <div class="col-sm-6" style="padding:10px 0 0 0">
             @Html.EditorFor(x => x.BusinessAreas)
         </div>
-        <div class="col-xs-1 text-right">
-            @Html.ValidationMessageFor(x => x.BusinessAreas)
+        <div class="col-sm-6">
+            <div class="info-container">
+                <div>
+                    Instructions:
+                    <span class="image-info-red"></span>
+                </div>
+                <div class="label-reg">
+                    Please select your personal business area.
+                    Check all that apply.
+                </div>
+            </div>
         </div>
     </div>
 </div>

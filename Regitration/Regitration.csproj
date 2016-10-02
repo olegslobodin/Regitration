@@ -185,7 +185,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Wizard\Index.cshtml" />
-    <Content Include="Views\Wizard\RegistrationCompleted.cshtml" />
     <Content Include="Views\Wizard\EditorTemplates\Step1ViewModel.cshtml" />
     <Content Include="Views\Wizard\EditorTemplates\Step2ViewModel.cshtml" />
     <Content Include="Views\Wizard\EditorTemplates\BusinessArea.cshtml" />

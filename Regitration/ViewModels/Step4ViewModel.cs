@@ -21,7 +21,7 @@ namespace Regitration.ViewModels
         public string Password { get; set; }
 
         [Required(ErrorMessage = "The field 'Confirm password' is required!")]
-        [Display(Name = "Confirm password")]
+        [Display(Name = "Confirm new password")]
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "Password confirmation does not match password above")]
         public string ConfirmPassword { get; set; }

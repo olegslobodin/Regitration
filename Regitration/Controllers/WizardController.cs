@@ -13,7 +13,7 @@ namespace Regitration.Controllers
             wizard.Initialize();
             return View(wizard);
         }
-        
+
         [HttpPost]
         public ActionResult Index([Deserialize]WizardViewModel wizard, IStepViewModel step)
         {
@@ -28,7 +28,7 @@ namespace Regitration.Controllers
                 {
                     wizard.CurrentStepIndex--;
                 }
-                else return View("RegistrationCompleted");
+                else return RedirectToAction("Index", "Home");
             }
             else if (!string.IsNullOrEmpty(Request["prev"]))
             {
