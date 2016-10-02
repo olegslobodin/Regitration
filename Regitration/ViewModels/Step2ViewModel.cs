@@ -31,6 +31,10 @@ namespace Regitration.ViewModels
                 BusinessAreas.Add(new BusinessArea { Id = i, Name = areasNames[i], IsChecked = false });
         }
 
+        private const string STitle = "Business Area";
+
+        public string StepTitle => STitle;
+
         [AtLeastOneAreaSelected(ErrorMessage = "Please select your personal business area.")]
         public List<BusinessArea> BusinessAreas { get; set; }
     }

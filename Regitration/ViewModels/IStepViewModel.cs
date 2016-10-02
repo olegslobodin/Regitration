@@ -2,5 +2,6 @@
 {
     public interface IStepViewModel
     {
+        string StepTitle { get; }
     }
 }

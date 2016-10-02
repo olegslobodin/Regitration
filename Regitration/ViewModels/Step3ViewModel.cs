@@ -29,6 +29,10 @@ namespace Regitration.ViewModels
                 Countries.Add(new CountryViewModel { Id = i, Name = countriesNames[i] });
         }
 
+        private const string STitle = "Address Info";
+
+        public string StepTitle => STitle;
+
         public List<CountryViewModel> Countries { get; private set; }
 
         [Required(ErrorMessage = "The field 'Country' is required!")]

@@ -21,6 +21,10 @@ namespace Regitration.ViewModels
                 };
         }
 
+        private const string STitle = "Contact Info";
+
+        public string StepTitle =>STitle;
+
         [Display(Name = "Salutation")]
         public int SalutationId { get; set; }
 

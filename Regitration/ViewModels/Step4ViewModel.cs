@@ -7,6 +7,10 @@ namespace Regitration.ViewModels
     [Serializable]
     public class Step4ViewModel : IStepViewModel
     {
+        private const string STitle = "Password";
+
+        public string StepTitle => STitle;
+
         [Required(ErrorMessage = "The field 'Password' is required!")]
         [DataType(DataType.Password)]
         [MembershipPassword(

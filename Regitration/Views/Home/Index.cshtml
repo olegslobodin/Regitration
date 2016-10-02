@@ -1,7 +1,7 @@
 ﻿@model Regitration.ViewModels.LoginPageViewModel
 
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Coral MSP";
 }
 
 <div class="login-page vertical-fill">
@@ -15,11 +15,11 @@
         @using (Html.BeginForm())
         {
             @Html.EditorFor(x => x)
-            <div class="row side-margins-0">
+            <div class="row">
                 <input id="loginBtn" type="submit" name="next" class="btn btn-default upper-case" />
             </div>
         }
-        <div id="links-bar" class="row side-margins-0">
+        <div id="links-bar" class="row">
             <div class="col-xs-5 side-paddings-0 text-left">
                 <a href="">Forgot Password?</a>
             </div>

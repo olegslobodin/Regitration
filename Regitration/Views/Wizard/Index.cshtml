@@ -2,42 +2,53 @@
 @model Regitration.ViewModels.WizardViewModel
 
 @{
-    ViewBag.Title = "Registration";
+    ViewBag.Title = "Register";
     var currentStep = Model.Steps[Model.CurrentStepIndex];
 }
 
-<h2>Registration</h2>
-
-<h5>Step @(Model.CurrentStepIndex + 1) of @Model.Steps.Count</h5>
-
-@using (Html.BeginForm())
-{
-    @Html.Serialize("wizard", Model)
-
-    @Html.Hidden("StepType", currentStep.GetType())
-
-    <div class="row">
-        @Html.EditorFor(x => currentStep, null, "")
-    </div>
-
-    <div class="row">
-        <div class="col-sm-5 col-sm-offset-5 text-right">
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Cancel</button>
-            @if (Model.CurrentStepIndex > 0)
-            {
-                <input type="submit" value="Previous" name="prev" class="btn btn-default" />
-            }
-
-            @if (Model.CurrentStepIndex < Model.Steps.Count - 1)
-            {
-                <input type="submit" value="Next" name="next" class="btn btn-default" />
-            }
-            else
-            {
-                <input type="submit" value="Finish" name="finish" class="btn btn-default" />
-            }
+<div class="registration-container">
+    @using (Html.BeginForm())
+    {
+        <div class="wizard-header">
+            <h2>New User Registration</h2>
+            <h5>Step @(Model.CurrentStepIndex + 1) of @Model.Steps.Count:</h5>
+            <h4 class="step-title">@currentStep.StepTitle</h4>
         </div>
-    </div>
-}
 
-@Html.Partial("_RegistrationCancelDialog")
+        <div class="layout-container">
+            @Html.Serialize("wizard", Model)
+
+            @Html.Hidden("StepType", currentStep.GetType())
+
+            <div class="row">
+                @Html.EditorFor(x => currentStep, null, "")
+            </div>
+        </div>
+
+        <div class="buttons-container">
+            <div class="col-sm-6 side-paddings-0">
+                @Html.ActionLink("Back to Login Page", "Index", "Home")
+            </div>
+            <div class="col-sm-6 side-paddings-0">
+                @if (Model.CurrentStepIndex < Model.Steps.Count - 1)
+                {
+                    <input type="submit" value="Next" name="next" class="btn-next" />
+                }
+                else
+                {
+                    <input type="submit" value="Finish" name="finish" class="btn btn-default" />
+                }
+
+                @if (Model.CurrentStepIndex > 0)
+                {
+                    <input type="submit" value="Previous" name="prev" class="btn-prev" />
+                }
+            </div>
+        </div>
+
+        <div class="registration-footer">
+            CORAL MULTI-SIDED PLATFORM 0.2.6.95 iQA
+            <span class="logo-image"></span>
+        </div>
+    }
+</div>
