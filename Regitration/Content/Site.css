@@ -183,6 +183,7 @@ div.copyright {
         font-weight: normal;
         text-transform: uppercase;
         padding-right: 0;
+        font-size: 12px;
     }
 
         .layout-container label::after {
@@ -200,6 +201,9 @@ div.copyright {
     font: 13px 'varela_roundregular', Tahoma, Geneva, sans-serif;
     height: 27px;
     width: 100%;
+    border-color: #ccd9d3;
+    border-width: 1px;
+    border-style: solid;
 }
 
 .btn-next {
